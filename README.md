@@ -2,6 +2,8 @@
 Gene Drumheller's course and personal project demonstration
 
 
+LinkedIn: https://www.linkedin.com/in/genedrumhellerli/
+
 
 
 

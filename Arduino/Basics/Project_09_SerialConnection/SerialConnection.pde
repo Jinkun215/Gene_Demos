@@ -1,3 +1,6 @@
+//Gene Drumheller
+//Arduino Project Handbook #14
+
 import processing.serial.*;
 Serial myPort;  //make Serial communication object
 

@@ -1,5 +1,5 @@
 # Project_Demo
-Gene Drumheller's course and personal project demonstration
+Gene Drumheller's Personal and Academic project demonstration and source codes
 
 
 LinkedIn: https://www.linkedin.com/in/genedrumhellerli/

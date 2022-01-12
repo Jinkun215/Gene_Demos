@@ -49,6 +49,7 @@ module VGA_Sync_Pulses
     reg [g_VIDEO_WIDTH-1:0] pattern_Blu;
     
     
+    // "Slow down" frequency by 2*value -> in this case 25Mhz
     Frequency_Divider #(.Divider_Value(2)) Frequency_Divider_Inst
     (
         .i_Clk_Real(i_Clk_Real),

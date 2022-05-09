@@ -1,0 +1,6 @@
+Gene Drumheller
+
+In this project, I have simulated a 2-way traffic light signals and a walking signal using the TM4C123 Texas Launch Pad, Switches, and LED's.
+As for the code itself, I've use a moore's finite state machine to transition states without using conditional branching.
+
+Please see the demo and the code

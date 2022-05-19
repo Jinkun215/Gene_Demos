@@ -1,0 +1,6 @@
+Gene Drumheller
+
+In this project, I have produced an beeping sound of 880Hz using and audiojack and the TM4C123 Texas Launch Pad.
+It uses the SysTick timer to set up an interrupt service routine
+
+Please see the demo and the code

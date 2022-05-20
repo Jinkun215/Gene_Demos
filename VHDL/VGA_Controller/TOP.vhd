@@ -7,8 +7,8 @@ use IEEE.numeric_std.all;
 entity TOP is
 
     generic (
-        g_Clks_Per_Bit: integer:= 217;
-        g_Video_Width: integer:= 3;
+        g_Clks_Per_Bit: integer:= 217;      ---- Desired Amount = Frequency of Clk / Frequency of UART = 25Mhz / 115200 = 217
+        g_Video_Width: integer:= 3;        
     
         g_Total_Col: integer:= 800;
         g_Active_Col: integer:= 640;

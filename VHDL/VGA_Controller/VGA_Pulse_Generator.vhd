@@ -83,9 +83,9 @@ begin
     begin
         if (rising_edge(i_Clk)) then
     
-            if (to_integer(unsigned(r_Col_Count)) < g_Active_Col + g_Col_Front) then
-                r_HSync <= '1';
-            elsif (to_integer(unsigned(r_Col_Count)) > g_Total_Col -1 - g_Col_Back) then
+            if (to_integer(unsigned(r_Col_Count)) < g_Active_Col + g_Col_Front) then            --See VGA Front Porch / Back Porch information for more detail
+                r_HSync <= '1';                                                                 --Basically, Sync = 1 when within Active and Porch
+            elsif (to_integer(unsigned(r_Col_Count)) > g_Total_Col -1 - g_Col_Back) then        -- Sync = 0 during Blank session
                 r_HSync <= '1';
             else
                 r_HSync <= '0';

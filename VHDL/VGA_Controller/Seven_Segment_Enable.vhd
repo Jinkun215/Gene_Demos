@@ -35,7 +35,7 @@ architecture Behavioral of Seven_Segment_Enable is
     
     signal r_SW: std_logic:= '0';
     
-    constant counter_Limit: integer:= 100000;
+    constant counter_Limit: integer:= 100000;                   --Slow down the cycle
     signal counter: integer range 0 to counter_Limit:= 0;
 
 begin
@@ -53,12 +53,12 @@ begin
             else
                 counter <= 0;
 
-                if (r_SW = '0') then
+                if (r_SW = '0') then                            --When Switch = 0, Show only Segment 1
                     r_Segment_Display <= r_Seven_Segment_1;
                     r_Segment_En <= "11111110";
                     r_SW <= not r_SW;                
                 else
-                    r_Segment_Display <= r_Seven_Segment_2;
+                    r_Segment_Display <= r_Seven_Segment_2;     --When Switch = 1, Show only Segment 2
                     r_Segment_En <= "11111101";
                     r_SW <= not r_SW;
             

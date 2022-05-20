@@ -47,7 +47,7 @@ begin
                     r_Clk_Counter <= 0;
                     r_Index <= 0;
                     
-                    if (i_RX_Serial = '0') then
+                    if (i_RX_Serial = '0') then                 --Wait until start bit (0 means begin)
                         Current_State <= s_Start_Bit;
                     else
                         Current_State <= s_Idle;
@@ -55,12 +55,12 @@ begin
                 
                 
                 when s_Start_Bit =>
-                    if (r_Clk_Counter < (g_Clks_Per_Bit-1)/2) then
+                    if (r_Clk_Counter < (g_Clks_Per_Bit-1)/2) then      --Wait until half of the Clks per Bit period so can read data at halfway poitn each time
                         r_Clk_Counter <= r_Clk_Counter + 1;
                         Current_State <= s_Start_Bit;
                     else
                         r_Clk_Counter <= 0;
-                        if (i_RX_Serial = '0') then
+                        if (i_RX_Serial = '0') then                 -- If start was not an error (not 0), start reading the Data.
                             Current_State <= s_Data_Bits;
                         else
                             Current_State <= s_Idle;
@@ -68,11 +68,11 @@ begin
                     end if;
                     
                 when s_Data_Bits =>
-                    if (r_Clk_Counter < g_Clks_Per_Bit-1) then
+                    if (r_Clk_Counter < g_Clks_Per_Bit-1) then          
                         r_Clk_Counter <= r_Clk_Counter + 1;
                         Current_State <= s_Data_Bits;
                     else
-                        r_RX_Byte(r_Index) <= i_RX_Serial;
+                        r_RX_Byte(r_Index) <= i_RX_Serial;          --Read each data one Clks per Bit cycle at a time until index = 7
                         r_Index <= r_Index + 1;
                         r_Clk_Counter <= 0;
                         if (r_Index < 7) then
@@ -84,12 +84,12 @@ begin
                     end if;
                     
                     
-                when s_Stop_Bit =>
+                when s_Stop_Bit =>                                  
                     if (r_Clk_Counter < g_Clks_Per_Bit-1) then
                         r_Clk_Counter <= r_Clk_Counter + 1;
                         Current_State <= s_Stop_Bit;
                     else
-                        r_Clk_Counter <= 0;
+                        r_Clk_Counter <= 0;                         -- When complete, send out an r_RX_DV bit to indicate finish
                         r_RX_DV <= '1';
                         Current_State <= s_Cleanup;
                     end if;

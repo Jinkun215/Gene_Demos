@@ -44,9 +44,9 @@ begin
                 when s_Idle =>
                     r_Clk_Counter <= 0;
                     r_Index <= 0;
-                    r_TX_Serial <= '1';
+                    r_TX_Serial <= '1';                         -- 
                     
-                    if (i_TX_DV = '1') then
+                    if (i_TX_DV = '1') then                     --Begin when DV from Receiver is 1
                         r_Data_Byte <= i_Data_Byte;
                         Current_State <= s_Start_Bit;
                     else
@@ -59,7 +59,7 @@ begin
                         r_Clk_Counter <= r_Clk_Counter + 1;
                         Current_State <= s_Start_Bit;
                     else
-                        r_TX_Serial <= '0';
+                        r_TX_Serial <= '0';                         -- r_TX_Serial = 0 indicates start
                         r_Clk_Counter <= 0;
                         Current_State <= s_Data_Bits;
                     end if;                  

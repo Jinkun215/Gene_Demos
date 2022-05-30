@@ -3,6 +3,6 @@ Gene Drumheller
 
 In this project, I have created a digital piano that play the notes C to the next C one octave above (C, D, E, F, G, A, B, C)
 
-This project demonstrate the use of Binary-Weighted DAC, NVIC SysTick ISR, and understanding the conversion from Electrical energy to Sound energy
+This project demonstrate the use of Binary-Weighted DAC, NVIC SysTick ISR, and understanding the conversion from Electrical energy to Sound energy on a TM4C123 development board.
 
 Please see the video demo and the source code for more information

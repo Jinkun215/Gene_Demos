@@ -1,8 +1,6 @@
 Gene Drumheller
 
-Traffic Lights Control demo
-using Moore's Finite State Machine and TM4C123 Texas Launch Pad
-Clock set to 80Mhz, use SysTick to delay time
+Click the image link to watch the demonstration on YouTube
 
 
 

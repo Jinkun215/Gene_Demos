@@ -1,0 +1,6 @@
+README
+Gene Drumheller
+
+In this review project, I went over how to create a 8x16 FIFO using a generic size and also coded a Debouncer to test properly on my Nexys4DDR FPGA Board
+
+Please see the codef or more details

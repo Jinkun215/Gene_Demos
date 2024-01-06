@@ -1,5 +1,5 @@
-This Python codes are from my senior project at the California State Polytechnic University, Pomona.
-Our team decided to use a NLP (Natural Language Processing) based chatbot.
+These Python codes are from my senior project at the California State Polytechnic University, Pomona.
+Our team decided to make a NLP (Natural Language Processing) based chatbot.
 By importing NLTK, Pytorch, and numpy, we made a Feed Forward based neural network model.
 
 The purpose of the chatbot is to take in customer questions for a kickboxing gym I work at, and answer the questions.

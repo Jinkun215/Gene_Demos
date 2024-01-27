@@ -1,8 +1,9 @@
 
 Gene Drumheller
 
-In this project, I have created a digital measuring stick that will measure the distance moved of a potentiometer
+In this project, I created a digital measuring stick. It will measure the moved distance of a potentiometer.
 
-This project demonstrate the use of ADC, NVIC SysTick ISR, UART, and the general understanding of sampling real world data into digital form.
+This project will demonstrate the use of ADC, NVIC SysTick ISR, UART using the TM4C123 development board.
+It will show my general understanding of sampling real world data into digital data.
 
-Please see the video demo and the source code for more information
+Please take a look at the video demo or the source code for more information.

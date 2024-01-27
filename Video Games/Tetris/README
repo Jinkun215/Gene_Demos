@@ -1,0 +1,7 @@
+Gene Drumheller
+
+This is a Tetris clone was written in C++ using Visual Studio Code software.  
+It utilized Raylib (https://www.raylib.com/), a programming library to create gaming interface.
+
+Please take a look at the source codes or the demo for more detail.  
+Feel free to download "Tetris.exe" and try the game out yourself.

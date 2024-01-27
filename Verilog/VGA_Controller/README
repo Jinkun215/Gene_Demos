@@ -1,7 +1,8 @@
 Gene Drumheller
 
-In this project, I demonstrate a 640 x 480 resolution VGA controller using a Nexsy4DDR FPGA board
-Using the UART communication protocol, I send a value from a computer which allows me to output 8 different VGA pattern on my screen
-I make sure I am receiving the correct input by displaying the data on the boards seven segment display and the UART transmitter
+In this project, I made a 640 x 480 resolution VGA controller using a Nexsy4DDR FPGA board, written in Verilog. 
+The project was done using the Vivado 2021.2 software.
+There are 8 different VGA output that is controled using UART communication protocol.  The data that control the output is sent from my computer to the FPGA.
 
-See Demo and Project code for more details
+
+Please watch the Demo or view the code for more details.

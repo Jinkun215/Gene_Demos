@@ -1,5 +1,5 @@
 # Project_Demo
-Gene Drumheller's Personal and Academic project and labs demonstrations
+Gene Drumheller's Project and Demonstrations.  
 
 Please checkout !Demo.md for any video demonstration.
 
